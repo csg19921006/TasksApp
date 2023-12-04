@@ -39,4 +39,6 @@ class LocaleString {
   static const report = 'report';
   static const profile = 'profile';
   static const addRecord = 'add';
+  static const homeTitle = 'homeTitle';
+  static const delete = 'delete';
 }

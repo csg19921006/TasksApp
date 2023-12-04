@@ -8,7 +8,7 @@ part of 'record_model.dart';
 
 class RecordModelAdapter extends TypeAdapter<RecordModel> {
   @override
-  final int typeId = 1;
+  final int typeId = 0;
 
   @override
   RecordModel read(BinaryReader reader) {
@@ -17,13 +17,13 @@ class RecordModelAdapter extends TypeAdapter<RecordModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return RecordModel(
-      fields[0] as String,
-      fields[1] as String,
-      fields[2] as String,
-      fields[3] as String,
-      fields[4] as String,
-      fields[5] as String,
-      fields[6] as String,
+      recordDate: fields[0] as String,
+      targetDate: fields[1] as String,
+      title: fields[2] as String,
+      note: fields[3] as String,
+      status: fields[4] as bool,
+      favorited: fields[5] as bool,
+      timeStamp: fields[6] as int,
     );
   }
 
@@ -32,19 +32,19 @@ class RecordModelAdapter extends TypeAdapter<RecordModel> {
     writer
       ..writeByte(7)
       ..writeByte(0)
-      ..write(obj.amountOfNumber)
-      ..writeByte(1)
-      ..write(obj.category)
-      ..writeByte(2)
       ..write(obj.recordDate)
-      ..writeByte(3)
+      ..writeByte(1)
       ..write(obj.targetDate)
-      ..writeByte(4)
+      ..writeByte(2)
+      ..write(obj.title)
+      ..writeByte(3)
       ..write(obj.note)
+      ..writeByte(4)
+      ..write(obj.status)
       ..writeByte(5)
-      ..write(obj.currency)
+      ..write(obj.favorited)
       ..writeByte(6)
-      ..write(obj.accountBookName);
+      ..write(obj.timeStamp);
   }
 
   @override

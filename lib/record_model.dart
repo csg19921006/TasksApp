@@ -2,43 +2,43 @@ import 'package:hive/hive.dart';
 
 part 'record_model.g.dart';
 
-@HiveType(typeId: 1)
+@HiveType(typeId: 0)
 class RecordModel {
   @HiveField(0)
-  // 数量
-  String amountOfNumber;
+  // 記録日付
+  final String recordDate;
 
   @HiveField(1)
-  // 種類
-  String category;
+  // 目標日付
+  final String targetDate;
 
   @HiveField(2)
-  // 記録日付
-  String recordDate;
+  // 備考
+  final String title;
 
   @HiveField(3)
-  // 目標日付
-  String targetDate;
+  // 備考
+  final String note;
 
   @HiveField(4)
-  // 備考
-  String note;
+  // 状態: false: 未完成 true: 完成
+  final bool status;
 
   @HiveField(5)
-  // 貨幣
-  String currency;
+  // 状態: false:  true:
+  final bool favorited;
 
   @HiveField(6)
-  // 手帳名
-  String accountBookName;
+  // timeStamp
+  final int timeStamp;
 
-  RecordModel(
-    this.amountOfNumber,
-    this.category,
-    this.recordDate,
-    this.targetDate,
-    this.note,
-    this.currency,
-    this.accountBookName,
-  );
+  RecordModel({
+    required this.recordDate,
+    required this.targetDate,
+    required this.title,
+    required this.note,
+    required this.status,
+    required this.favorited,
+    required this.timeStamp,
+  });
 }

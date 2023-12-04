@@ -9,7 +9,6 @@ class HiveUseCase extends ChangeNotifier {
   HiveUseCase._internal();
   static const _recordBoxName = '_recordBoxName';
   late final Box _recordBox;
-  late final Box _accountBookNameBox;
   Future<void> init() async {
     final directory = await getApplicationDocumentsDirectory();
     Hive
@@ -28,7 +27,10 @@ class HiveUseCase extends ChangeNotifier {
   }
 
   Future<void> addRecord(RecordModel model) async {
-    _accountBookNameBox.values;
-    _recordBox.add(model);
+    _recordBox.put(model.timeStamp, model);
+  }
+
+  Future<void> deleteRecord(RecordModel model) async {
+    _recordBox.delete(model.timeStamp);
   }
 }

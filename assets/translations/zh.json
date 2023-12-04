@@ -2,5 +2,7 @@
   "home": "主页",
   "bill": "账单",
   "report": "报表",
-  "profile": "我"
+  "profile": "我",
+  "homeTitle": "任务列表",
+  "delete": "删除"
 }
