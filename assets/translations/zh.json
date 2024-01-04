@@ -4,5 +4,6 @@
   "report": "报表",
   "profile": "我",
   "homeTitle": "任务列表",
-  "delete": "删除"
+  "delete": "删除",
+  "createTask": "新建任务"
 }

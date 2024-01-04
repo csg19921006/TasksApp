@@ -2,5 +2,6 @@
   "home": "home",
   "bill": "bill",
   "report": "report",
-  "profile": "profile"
+  "profile": "profile",
+  "createTask": "Create Task"
 }

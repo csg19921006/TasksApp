@@ -6,29 +6,29 @@ part of 'record_model.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class RecordModelAdapter extends TypeAdapter<RecordModel> {
+class RecordModelImplAdapter extends TypeAdapter<_$RecordModelImpl> {
   @override
   final int typeId = 0;
 
   @override
-  RecordModel read(BinaryReader reader) {
+  _$RecordModelImpl read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return RecordModel(
-      recordDate: fields[0] as String,
-      targetDate: fields[1] as String,
+    return _$RecordModelImpl(
+      recordDate: fields[0] as DateTime?,
+      targetDate: fields[1] as DateTime?,
       title: fields[2] as String,
       note: fields[3] as String,
       status: fields[4] as bool,
-      favorited: fields[5] as bool,
+      favorite: fields[5] as int,
       timeStamp: fields[6] as int,
     );
   }
 
   @override
-  void write(BinaryWriter writer, RecordModel obj) {
+  void write(BinaryWriter writer, _$RecordModelImpl obj) {
     writer
       ..writeByte(7)
       ..writeByte(0)
@@ -42,7 +42,7 @@ class RecordModelAdapter extends TypeAdapter<RecordModel> {
       ..writeByte(4)
       ..write(obj.status)
       ..writeByte(5)
-      ..write(obj.favorited)
+      ..write(obj.favorite)
       ..writeByte(6)
       ..write(obj.timeStamp);
   }
@@ -53,7 +53,7 @@ class RecordModelAdapter extends TypeAdapter<RecordModel> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is RecordModelAdapter &&
+      other is RecordModelImplAdapter &&
           runtimeType == other.runtimeType &&
           typeId == other.typeId;
 }

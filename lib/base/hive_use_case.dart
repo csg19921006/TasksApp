@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:tasks_app_flutter_project/record_model.dart';
+import 'package:tasks_app_flutter_project/home/record_model.dart';
 
 class HiveUseCase extends ChangeNotifier {
   static HiveUseCase? _instance;
@@ -13,7 +13,7 @@ class HiveUseCase extends ChangeNotifier {
     final directory = await getApplicationDocumentsDirectory();
     Hive
       ..init(directory.path)
-      ..registerAdapter(RecordModelAdapter());
+      ..registerAdapter(RecordModelImplAdapter());
     _recordBox = await Hive.openBox<RecordModel>(_recordBoxName);
   }
 
@@ -32,5 +32,9 @@ class HiveUseCase extends ChangeNotifier {
 
   Future<void> deleteRecord(RecordModel model) async {
     _recordBox.delete(model.timeStamp);
+  }
+
+  Future<void> editRecord(RecordModel model) async {
+    _recordBox.put(model.timeStamp, model);
   }
 }
