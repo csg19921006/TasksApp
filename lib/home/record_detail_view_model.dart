@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tasks_app_flutter_project/base/base_view_model.dart';
+import 'package:tasks_app_flutter_project/home/record_detail_use_case.dart';
 import 'package:tasks_app_flutter_project/home/record_model.dart';
-import 'package:tasks_app_flutter_project/record_detail_use_case.dart';
 
 final recordDetailViewModelProvider =
     ChangeNotifierProvider.autoDispose<RecordDetailViewModel>(

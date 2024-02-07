@@ -4,8 +4,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:tasks_app_flutter_project/base/base_page.dart';
 import 'package:tasks_app_flutter_project/home/home_notifier.dart';
 import 'package:tasks_app_flutter_project/home/home_state.dart';
+import 'package:tasks_app_flutter_project/home/record_detail_page.dart';
 import 'package:tasks_app_flutter_project/home/record_model.dart';
-import 'package:tasks_app_flutter_project/record_detail_page.dart';
 
 class HomePage extends HookConsumerWidget with BasePage {
   const HomePage({super.key});

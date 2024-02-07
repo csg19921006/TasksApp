@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:tasks_app_flutter_project/base/base_page.dart';
 import 'package:tasks_app_flutter_project/home/home_notifier.dart';
+import 'package:tasks_app_flutter_project/home/record_detail_view_model.dart';
 import 'package:tasks_app_flutter_project/home/record_model.dart';
-import 'package:tasks_app_flutter_project/record_detail_view_model.dart';
 
 class RecordDetailPage extends StatelessWidget with BasePage {
   final RecordModel model;

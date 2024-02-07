@@ -931,6 +931,13 @@
             </list>
           </value>
         </entry>
+        <entry key="test_02_package">
+          <value>
+            <list>
+              <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/test_02_package-0.0.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="test_api">
           <value>
             <list>
@@ -1201,6 +1208,7 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sync_http-0.3.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/term_glyph-1.2.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test-1.24.3/lib" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_02_package-0.0.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_api-0.6.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/test_core-0.5.3/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/timing-1.0.1/lib" />
